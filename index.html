@@ -1,0 +1,57 @@
+<html>
+  <head>
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+
+  <body>
+    <a-assets>
+     <a-asset-item id="tinker-obj" src="/path/to/tinker.obj"></a-asset-item> 
+     <a-asset-item id="obj-mtl" src="/path/to/obj.mtl"></a-asset-item> 
+</a-assets>
+
+<a-scene>
+
+<a-entity obj-model="obj: #tinker-obj; mtl: #obj-mtl"></a-entity>
+  
+	<a-box 
+  color="blue" 
+  position="0 2 -5" 
+  rotation="0 90 90" 
+  scale="2 2 2"> 
+  <a-sphere
+  color="#458AED"
+  position="0 1 -2">
+</a-sphere> 
+<a-animation 
+attribute="position" 
+to="0 3 -5" 
+direction="alternate" 
+dur="2000"
+repeat="indefinite">     
+  </a-box>
+
+  <a-sky color="#98E8D8"></a-sky>
+  <a-text 
+  value="Hi and Welcome!" 
+  color="#952489"
+  position="-0.9 0.2 -3" 
+  scale="1.5 1.5 1.5">
+  </a-text>
+   <a-plane 
+  rotation="-90 0 0" 
+  width="30" 
+  height="30"
+  color="#FFE66F">  
+  </a-plane>
+
+  <a-light type="ambient" color="#445451"></a-light>
+  <a-light type="point" intensity="2" position="2 4 4"></a-light>
+  <audio src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay
+preload>
+</audio>
+
+</a-scene>
+  </body>
+
+</html>
