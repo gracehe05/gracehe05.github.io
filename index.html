@@ -13,6 +13,9 @@
 
      <a-asset-item id="tinker-obj" src="tinker.obj"></a-asset-item>
      <a-asset-item id="obj-mtl" src="obj.mtl"></a-asset-item>
+
+      <a-asset-item id="organ-obj" src="organ.obj"></a-asset-item>
+     <a-asset-item id="organ-mtl" src="organ.mtl"></a-asset-item>
      </a-assets>
 <a-scene>
 <a-plane
@@ -32,6 +35,12 @@ obj-model="obj: #tinker-obj; mtl: #obj-mtl"
 scale=".03 .03 .03" 
 rotation="-90 0 0" 
 position="-0.227 0.001 -3.722">
+</a-entity>
+<a-entity 
+obj-model="obj: #organ-obj; mtl: #organ-mtl" 
+scale=".1 .1 .1" 
+rotation="-90 0 0" 
+position="0.055 0.069 -3.697">  
 </a-entity>
  <a-text 
   value="cell wall+cell membrane" 
